@@ -5,14 +5,14 @@ fetch('https://rickandmortyapi.com/api/character')
   .then(data => {
 data.results.forEach(item => {
     let card=document.createElement("div")
+    card.classList.add("card")
     let name=document.createElement("h4")
     let img = document.createElement("img");
     name.innerText=`${item.name}`
     img.src = item.image;
-    containerDiv.appendChild(name)
-    containerDiv.appendChild(img);
+    card.appendChild(name)
+    card.appendChild(img);   
+    containerDiv.appendChild(card)
     });
-    // div.appendChild(containerDiv)
+ 
   });
-
-
